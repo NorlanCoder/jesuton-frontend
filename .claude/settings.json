@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Mr Nerd\\\\OneDrive\\\\Desktop\\\\Perso\\\\jesuton\\\\frontend\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)"
+    ]
+  }
+}

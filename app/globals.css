@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bone: #f4efe6;
+    --bone-soft: #faf7f1;
+    --char: #0a0a0a;
+    --ember: #c0392b;
+    --moss: #2f4a3a;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bone);
+  }
+
+  body {
+    @apply bg-bone text-char font-sans;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: var(--char);
+    color: var(--bone);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    font-feature-settings: 'ss01';
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bone);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(10, 10, 10, 0.18);
+    border-radius: 999px;
+    border: 2px solid var(--bone);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(10, 10, 10, 0.4);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply container mx-auto;
+  }
+
+  /* — Boutons éditoriaux — */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 text-sm font-medium tracking-tight transition-all duration-300 ease-editorial focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ember focus-visible:ring-offset-bone disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn relative overflow-hidden rounded-full bg-char text-bone px-6 py-3.5;
+  }
+
+  .btn-primary::after {
+    content: '';
+    @apply absolute inset-0 bg-ember scale-x-0 origin-left transition-transform duration-500 ease-editorial;
+  }
+
+  .btn-primary:hover::after {
+    @apply scale-x-100;
+  }
+
+  .btn-primary > * {
+    @apply relative z-10;
+  }
+
+  .btn-ghost {
+    @apply btn rounded-full px-5 py-3 text-char hover:bg-char hover:text-bone border border-char/20 hover:border-char;
+  }
+
+  .btn-link {
+    @apply btn text-char relative;
+  }
+
+  .btn-link::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 right-0 h-px bg-char origin-right scale-x-100 transition-transform duration-500 ease-editorial;
+  }
+
+  .btn-link:hover::after {
+    @apply origin-left scale-x-0;
+  }
+
+  /* — Section markers (numérotation 01 / 02…) — */
+  .section-mark {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/60;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/60;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-8 bg-char/40;
+  }
+
+  /* — Display (Montserrat moderne, sans-serif gras, tracking ultra-serré) — */
+  .display-1 {
+    @apply font-display font-extrabold text-[2.75rem] leading-[0.95] tracking-ultra sm:text-6xl lg:text-7xl xl:text-8xl;
+  }
+
+  .display-2 {
+    @apply font-display font-extrabold text-4xl leading-[0.98] tracking-tightest sm:text-5xl lg:text-6xl;
+  }
+
+  .display-3 {
+    @apply font-display font-bold text-3xl leading-[1] tracking-tightest sm:text-4xl lg:text-5xl;
+  }
+
+  /* Accent italique de Montserrat — plus moderne, moins éditorial */
+  .display-accent {
+    @apply italic font-medium;
+  }
+
+  /* — Cards — */
+  .card-edge {
+    @apply rounded-[28px] border border-char/10 bg-bone-50 p-7 transition-all duration-500 ease-editorial;
+  }
+
+  .card-edge:hover {
+    @apply border-char/30 -translate-y-1 shadow-edge;
+  }
+
+  /* — Inputs — */
+  .input {
+    @apply w-full rounded-2xl border border-char/15 bg-transparent px-5 py-4 text-base text-char placeholder:text-char/40 transition focus:border-char focus:outline-none focus:ring-0;
+  }
+
+  .label {
+    @apply mb-2 block font-mono text-[0.7rem] uppercase tracking-[0.2em] text-char/60;
+  }
+
+  /* — Badges produit — */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[0.7rem] font-medium uppercase tracking-wider;
+  }
+
+  .pill-available {
+    @apply pill bg-moss text-bone;
+  }
+
+  .pill-out {
+    @apply pill bg-char text-bone/80;
+  }
+
+  .pill-soon {
+    @apply pill bg-ember text-bone;
+  }
+
+  /* — Lignes éditoriales — */
+  .rule {
+    @apply h-px w-full bg-char/15;
+  }
+
+  .grid-overlay {
+    @apply pointer-events-none absolute inset-0 bg-grid-bone bg-[size:80px_80px] opacity-40;
+  }
+
+  /* — Section bases — */
+  .section {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .section-tight {
+    @apply py-14 md:py-20;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* — Marquee — */
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    user-select: none;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .marquee-track {
+    flex-shrink: 0;
+    display: flex;
+    animation: marquee 38s linear infinite;
+    will-change: transform;
+  }
+
+  /* — Reveal — */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .text-fluid {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+
+  .underline-hover {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .underline-hover:hover {
+    background-size: 100% 1px;
+  }
+}
