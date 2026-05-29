@@ -4,11 +4,11 @@ import SectionMark from '@/components/ui/SectionMark';
 import Reveal from '@/components/ui/Reveal';
 
 const DIRECTOR = {
-  name: 'Justin Sotonougbo',
+  name: 'Emmanuel AGBO',
   role: 'Directeur Général · Jesuton SARL',
   portrait:
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
-  alt: 'Portrait du directeur général de Jesuton SARL',
+    '/Emmanuel AGBO Blanc Noir.png',
+  alt: 'Emmanuel AGBO, D.G. Jesuton SARL',
 };
 
 export default function DirectorWord() {
@@ -27,11 +27,11 @@ export default function DirectorWord() {
           </div>
           <Reveal
             delay={120}
-            className="max-w-md text-base leading-relaxed text-char/75 lg:col-span-4 lg:col-start-9"
+            className="max-w-md text-base leading-relaxed text-char/75 lg:col-span-6 lg:col-start-9"
           >
-            Plus d&apos;une décennie au service de l&apos;énergie au Bénin, et
-            la conviction qu&apos;une solution durable se construit avec ses
-            communautés.
+            JESUTON SARL ambitionne de devenir un acteur de référence au Bénin et en Afrique de
+            l’Ouest dans la fourniture de solutions techniques durables, notamment dans les domaines d
+            l’énergie solaire, du BTP, des travaux d’électricité généralet des infrastructures de base.
           </Reveal>
         </div>
 
@@ -57,7 +57,7 @@ export default function DirectorWord() {
                   }}
                 />
                 <span className="absolute left-5 top-5 font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/80">
-                  № 04 · Cotonou
+                  № 04 · Ab. Calavi
                 </span>
                 <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
                   <div>
@@ -86,30 +86,31 @@ export default function DirectorWord() {
               className="h-12 w-12 -translate-x-1 text-ember"
             />
             <blockquote className="mt-4 font-display text-2xl font-medium leading-[1.25] tracking-tight text-char sm:text-3xl">
-              «&nbsp;Apporter l&apos;énergie solaire à chaque foyer béninois
-              n&apos;est pas une promesse marketing. C&apos;est{' '}
-              <span className="italic text-ember">
-                notre engagement quotidien
-              </span>{' '}
-              depuis plus de dix ans.&nbsp;»
+              «&nbsp;L’énergie solaire n’est plus un luxe ;
+              elle est devenue un levier essentiel de <span className="italic text-ember">liberté</span>{' '} et de
+<span className="italic text-ember"> développement.</span>»
+
+               
             </blockquote>
 
             <div className="mt-8 space-y-5 text-base leading-relaxed text-char/75">
               <p>
-                Quand nous avons fondé Jesuton SARL en 2014, le Bénin
-                comptait encore d&apos;immenses zones plongées dans
-                l&apos;obscurité dès la tombée du jour. Nous avons fait le
-                choix d&apos;une promesse simple : un kit, une pompe, un
-                lampadaire — et l&apos;ingénierie qui les fait tenir dans le
-                temps.
+                Bienvenue dans l'univers de JESUTON Sarl, où chaque projet est une opportunité de bâtir un
+                avenir plus lumineux.
+                À la création de cette entreprise, notre ambition était claire : contribuer à lever les contraintes
+                liées à l’accès à l’énergie en proposant des solutions solaires fiables, performantes et accessibles
+                au plus grand nombre.
               </p>
               <p>
-                Aujourd&apos;hui, plus de cinq mille installations plus tard,
-                nous restons fidèles à cette exigence. Du dimensionnement à
-                la maintenance, chaque projet est traité comme s&apos;il
-                s&apos;agissait du nôtre. C&apos;est ainsi que nous bâtissons
-                une <span className="text-char">souveraineté énergétique</span>{' '}
-                durable, à l&apos;échelle du foyer comme du territoire.
+                Aujourd&apos;hui, JESUTON SARL accompagne les ménages, les professionnels et les
+                entrepreneurs dans leur quête d&apos;autonomie énergétique. Qu&apos;il s&apos;agisse d&apos;éclairer un foyer,
+                d&apos;améliorer le confort quotidien ou de soutenir des activités génératrices de revenus grâce à nos
+                solutions de conservation et d&apos;équipements, chaque installation que nous réalisons participe à
+                la construction d&apos;un environnement plus résilient et durable.
+              </p>
+              <p>
+                Chez JESUTON SARL, nous ne nous contentons pas de fournir des solutions énergétiques ;
+                nous contribuons à transformer des vies et à créer de nouvelles opportunités.
               </p>
             </div>
 

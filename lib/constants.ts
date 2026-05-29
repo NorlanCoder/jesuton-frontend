@@ -5,13 +5,13 @@ export const SITE = {
     "Jesuton SARL conçoit, fournit et installe des solutions solaires fiables au Bénin : kits solaires, microcentrales, lampadaires, pompes solaires, audits et études techniques.",
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || '+229 00 00 00 00',
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@jesuton.bj',
-  address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || 'Cotonou, Bénin',
+  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || '+229 01 95 67 56 30 / +229 01 96 75 56 61',
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'Jesutonofficiel@gmail.com',
+  address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || 'Abomey-Calavi, Benin',
   social: {
-    facebook: 'https://facebook.com/jesutonsarl',
-    linkedin: 'https://linkedin.com/company/jesuton-sarl',
-    whatsapp: 'https://wa.me/22900000000',
+    facebook: 'http://facebook.com/profile.php?id=100063686014677',
+    linkedin: 'https://www.linkedin.com/in/jesuton-sarl-officiel-vente-des-équipements-solaires-296b46366?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    whatsapp: 'https://wa.me/22952940044',
   },
 } as const;
 
