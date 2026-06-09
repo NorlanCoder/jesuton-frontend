@@ -70,7 +70,7 @@ export default function ContactForm() {
             className="input"
             value={form.name}
             onChange={(e) => update('name', e.target.value)}
-            placeholder="Jean Dupont"
+            placeholder="Votre nom complet"
             required
             minLength={2}
           />
@@ -94,7 +94,7 @@ export default function ContactForm() {
           className="input"
           value={form.phone}
           onChange={(e) => update('phone', e.target.value)}
-          placeholder="+229 00 00 00 00"
+          placeholder="+229 01 00 00 00 00"
         />
       </Field>
 
