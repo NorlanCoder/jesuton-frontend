@@ -66,7 +66,7 @@ export default function Header() {
                 <span
                   className={cn(
                     'font-mono text-[0.7rem] tabular-nums',
-                    overlay ? 'text-bone/50' : 'text-char/40',
+                    overlay ? 'text-bone/50' : 'text-black',
                   )}
                 >
                   {String(i + 1).padStart(2, '0')}

@@ -4,7 +4,7 @@ import SectionMark from '@/components/ui/SectionMark';
 import Reveal from '@/components/ui/Reveal';
 
 const DIRECTOR = {
-  name: 'Emmanuel AGBO',
+  name: 'Mahugon Emmanuel AGBO',
   role: 'Directeur Général · Jesuton SARL',
   portrait:
     '/Emmanuel AGBO Blanc Noir.png',
@@ -22,7 +22,7 @@ export default function DirectorWord() {
             <h2 className="display-2 mt-6 max-w-[20ch]">
               Une vision <span className="italic text-ember">enracinée</span>,
               <br />
-              une exécution rigoureuse.
+              une exécution rigoureuse
             </h2>
           </div>
           <Reveal
@@ -38,7 +38,7 @@ export default function DirectorWord() {
         {/* Bloc principal */}
         <div className="mt-12 grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Portrait */}
-          <Reveal className="lg:col-span-5">
+          {/* <Reveal className="lg:col-span-5">
             <figure className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-char">
                 <Image
@@ -70,16 +70,16 @@ export default function DirectorWord() {
                   </div>
                 </figcaption>
               </div>
-              {/* Petit cadre éditorial */}
               <span
                 aria-hidden
                 className="pointer-events-none absolute -bottom-3 -right-3 hidden h-24 w-24 border-b border-r border-char/30 sm:block"
               />
             </figure>
           </Reveal>
+*/}
 
           {/* Texte / lettre */}
-          <Reveal delay={150} className="lg:col-span-7">
+          <Reveal delay={150} className="lg:col-span-12 mx-8">
             <Quote
               aria-hidden
               strokeWidth={1.2}
@@ -125,11 +125,11 @@ export default function DirectorWord() {
                     <span key={i}>{i === 0 ? part : ` ${part}`}</span>
                   ))}
                 </p>
-                <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-char/55">
+                <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
                   {DIRECTOR.role}
                 </p>
               </div>
-              <span className="hidden font-mono text-[0.65rem] uppercase tracking-[0.32em] text-char/45 sm:inline">
+              <span className="hidden font-mono text-[0.65rem] uppercase tracking-[0.32em] text-black sm:inline">
                 Cotonou · 2026
               </span>
             </div>

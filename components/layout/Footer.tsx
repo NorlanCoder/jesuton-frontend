@@ -72,6 +72,7 @@ export default function Footer() {
                 ['Facebook', SITE.social.facebook],
                 ['LinkedIn', SITE.social.linkedin],
                 ['WhatsApp', SITE.social.whatsapp],
+                ['TikTok', SITE.social.tiktok]
               ].map(([label, href]) => (
                 <a
                   key={label}

@@ -86,7 +86,7 @@ export default function ServicesPage() {
             <span className="italic text-ember">maintenance</span>, sans rupture.
           </>
         }
-        description="Nous prenons en charge l'intégralité de votre projet : étude, équipement, installation, mise en service, suivi long terme."
+        description="Nous prenons en charge l'intégralité de votre projet : étude, dimensionnement, équipement, installation, mise en service, suivi long terme."
       />
 
       {/* Liste services en mode éditorial */}
@@ -96,7 +96,7 @@ export default function ServicesPage() {
             {services.map((s) => (
               <li key={s.n} className="group relative px-2 py-12 sm:px-8">
                 <div className="flex items-start justify-between">
-                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-char/50">
+                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
                     № {s.n}
                   </span>
                   <span

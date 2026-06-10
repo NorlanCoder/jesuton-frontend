@@ -45,7 +45,7 @@ export default function AboutPreview() {
 
             <h2 className="display-2 mt-6 max-w-[20ch] text-balance">
               Une expertise <span className="text-ember">béninoise</span>,
-              tenace, qui n&apos;a jamais cessé d&apos;apprendre.
+              tenace, qui n&apos;a jamais cessé d&apos;apprendre
             </h2>
           </div>
 
@@ -79,7 +79,7 @@ export default function AboutPreview() {
               <p className="font-display text-5xl font-extrabold tracking-ultra text-char sm:text-6xl">
                 {h.value}
               </p>
-              <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-char/60">
+              <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-black">
                 {h.label}
               </p>
             </motion.div>

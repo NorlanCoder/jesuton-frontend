@@ -8,17 +8,17 @@ const pillars = [
   {
     n: '01',
     title: 'Engagement écologique',
-    text: 'Réduire l’empreinte carbone du Bénin par des solutions 100 % propres.',
+    text: 'Réduire l’empreinte carbone du Bénin par l’energie durable.',
   },
   {
     n: '02',
     title: 'Énergie durable',
-    text: 'Démocratiser une électricité fiable, autonome et respectueuse.',
+    text: 'Rendre accessible une électricité fiable, autonome et respectueuse.',
   },
   {
     n: '03',
     title: 'Impact local',
-    text: 'Créer de l’emploi qualifié et soutenir l’autonomie des communautés.',
+    text: 'Stimuler la création d’emplois, dynamiser les activités génératrices de revenus et renforcer l’économie locale.',
   },
 ];
 
@@ -32,9 +32,9 @@ export default function Mission() {
           <div className="lg:col-span-7">
             <SectionMark index="05" label="Manifeste" invert />
             <h2 className="display-2 mt-6 text-bone">
-              Construire un Bénin{' '}
+              Bâtir un Bénin{' '}
               <span className="italic text-ember">alimenté</span> par le
-              soleil.
+              photovoltaïque
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">

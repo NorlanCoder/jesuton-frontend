@@ -49,7 +49,7 @@ export default function Pagination({
           p === '…' ? (
             <span
               key={`ellipsis-${i}`}
-              className="px-2 font-mono text-xs text-char/40"
+              className="px-2 font-mono text-xs text-black"
               aria-hidden
             >
               …
@@ -130,7 +130,7 @@ function NumberLink({
         'inline-flex h-10 min-w-10 items-center justify-center rounded-full font-mono text-xs tracking-[0.18em] transition',
         active
           ? 'bg-char text-bone'
-          : 'text-char/60 hover:bg-char/5 hover:text-char',
+          : 'text-black hover:bg-char/5 hover:text-char',
       )}
     >
       {children}

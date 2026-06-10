@@ -122,7 +122,7 @@ export default function ContactForm() {
       </Field>
 
       <div className="flex items-center justify-between border-t border-char/15 pt-6">
-        <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-char/50">
+        <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-black">
           Réponse sous 24h ouvrées
         </p>
         <button

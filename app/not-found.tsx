@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="bg-bone">
       <div className="container-page flex min-h-[70vh] flex-col items-start justify-center pt-32 pb-24 md:pt-40">
-        <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/60">
+        <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black">
           ★ Erreur 404
         </p>
         <h1 className="display-1 mt-6 max-w-[16ch]">

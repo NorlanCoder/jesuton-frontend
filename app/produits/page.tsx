@@ -67,13 +67,13 @@ export default async function ProductsPage({ searchParams }: PageProps) {
           </div>
 
           <div className="mt-10 flex items-baseline justify-between border-b border-char/10 pb-6">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-char/60">
+            <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
               {meta
                 ? `${String(meta.total).padStart(3, '0')} produit${meta.total > 1 ? 's' : ''}`
                 : 'Chargement…'}
             </p>
             {meta && meta.total > 0 && (
-              <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-char/40">
+              <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-black">
                 Page {String(meta.current_page).padStart(2, '0')} /{' '}
                 {String(meta.last_page).padStart(2, '0')}
               </p>

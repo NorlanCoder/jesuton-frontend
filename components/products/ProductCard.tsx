@@ -84,7 +84,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         <div className="mt-auto flex items-center justify-between gap-2 pt-6">
           <Link
             href={`/produits/${product.slug}`}
-            className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-char/60 underline-hover hover:text-char"
+            className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-black underline-hover hover:text-char"
           >
             Voir les détails
           </Link>

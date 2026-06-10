@@ -33,7 +33,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <div className="container-page pt-32 pb-12 md:pt-40 md:pb-20">
         <Link
           href="/produits"
-          className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-char/60 underline-hover hover:text-char"
+          className="inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-black underline-hover hover:text-char"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           Retour au catalogue
@@ -105,7 +105,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </Link>
               <Link
                 href="/produits"
-                className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-char/60 underline-hover hover:text-char"
+                className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-black underline-hover hover:text-char"
               >
                 Voir d&apos;autres produits
               </Link>
@@ -134,7 +134,7 @@ function DescItem({
 }) {
   return (
     <div className="bg-bone-50 p-5">
-      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-char/50">
+      <dt className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-black">
         {label}
       </dt>
       <dd className="mt-2 text-sm text-char">{value}</dd>

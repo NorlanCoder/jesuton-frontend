@@ -37,7 +37,7 @@ const solutions: Solution[] = [
     href: '/produits?category=kits-solaires',
     feature: 'À partir de 1 kVA',
     image:
-      'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80',
+      '/Kit solaire.png',
     alt: 'Toiture résidentielle équipée de panneaux solaires',
     meta: { label: 'Kits installés', value: '2 000+' },
   },
@@ -50,8 +50,8 @@ const solutions: Solution[] = [
     href: '/produits?category=pompes-solaires',
     feature: 'Surface & immergées',
     image:
-      'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1400&q=80',
-    alt: 'Champs cultivés irrigués grâce à des pompes solaires',
+      '/pompe solaire.png',
+    alt: 'Pompe solaire',
     meta: { label: 'Pompes solaires', value: '200+' },
   },
   {
@@ -63,9 +63,9 @@ const solutions: Solution[] = [
     href: '/produits?category=lampadaires',
     feature: 'Autonomie 12h+',
     image:
-      'https://images.unsplash.com/photo-1473308822086-710304d7d30c?auto=format&fit=crop&w=1400&q=80',
+      '/lampadaire solaire 1.jpeg',
     alt: 'Lampadaire moderne sous un ciel dégagé',
-    meta: { label: 'Lampadaires', value: '2 000+' },
+    meta: { label: 'Lampadaires', value: '5 000+' },
   },
   {
     index: '04',
@@ -85,13 +85,13 @@ const solutions: Solution[] = [
     title: 'Climatisation',
     italic: 'solaire',
     description:
-      'Refroidissement hybride photovoltaïque pour le tertiaire et le résidentiel. Jusqu’à -70% de consommation réseau.',
+      'Refroidissement hybride photovoltaïque pour le tertiaire et le résidentiel. Jusqu’à -70% de consommation d’énergie.',
     href: '/produits?category=climatisation',
     feature: 'Jusqu’à -70%',
     image:
-      'https://images.unsplash.com/photo-1631545806842-b2e95571a6c1?auto=format&fit=crop&w=1400&q=80',
+      '/close-up-heat-pump-outside-home.jpg',
     alt: 'Intérieur lumineux climatisé avec apport solaire',
-    meta: { label: 'Économie réseau', value: '-70%' },
+    meta: { label: 'Économie d’énergie', value: '-70%' },
   },
   {
     index: '06',
@@ -102,9 +102,9 @@ const solutions: Solution[] = [
     href: '/services',
     feature: 'Expertise terrain',
     image:
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80',
+      '/photovoltaics-factory-investors-evaluate-solar-panels-addressing-issues.jpg',
     alt: 'Ingénieur étudiant des plans techniques',
-    meta: { label: 'Audits réalisés', value: '1 000+' },
+    meta: { label: 'Audits réalisés', value: '100+' },
   },
 ];
 
@@ -155,8 +155,8 @@ export default function Solutions() {
           <div className="lg:col-span-7">
             <SectionMark index="03" label="Catalogue" />
             <h2 className="display-2 mt-6">
-              Six familles. Une même{' '}
-              <span className="italic text-ember">exigence</span>.
+              Six gammes. Une qualité{' '}
+              <span className="italic text-ember">sans concession</span>
             </h2>
           </div>
           <Reveal
@@ -165,7 +165,7 @@ export default function Solutions() {
           >
             Du kit résidentiel à la microcentrale communale : du matériel
             certifié, un dimensionnement rigoureux, une installation
-            irréprochable.
+            irréprochable et un service après-vente assuré.
           </Reveal>
         </div>
 
@@ -181,7 +181,7 @@ export default function Solutions() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/55">
+                <span className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black">
                   Solution № {active.index} · {active.feature}
                 </span>
                 <h3 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-ultra text-char sm:text-[4.25rem]">
@@ -283,7 +283,7 @@ export default function Solutions() {
         {/* Barre de navigation horizontale style Hero */}
         <div className="mt-14 border-t border-char/15 pt-6">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <p className="hidden font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/55 md:block">
+            <p className="hidden font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black md:block">
               Glissez ou utilisez les flèches pour explorer
             </p>
             <div className="flex items-center gap-2 md:ml-auto">

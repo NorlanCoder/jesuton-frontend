@@ -64,7 +64,7 @@ export default function Logo({
             className={cn(
               'font-mono uppercase tracking-[0.25em]',
               s.tag,
-              isLight ? 'text-bone/60' : 'text-char/55',
+              isLight ? 'text-bone/60' : 'text-black',
             )}
           >
             /sarl

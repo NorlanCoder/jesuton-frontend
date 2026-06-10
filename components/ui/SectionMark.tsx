@@ -17,7 +17,7 @@ export default function SectionMark({
     <div
       className={cn(
         'flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.32em]',
-        invert ? 'text-bone/60' : 'text-char/60',
+        invert ? 'text-bone/60' : 'text-black',
         className,
       )}
     >

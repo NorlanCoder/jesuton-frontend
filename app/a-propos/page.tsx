@@ -26,7 +26,7 @@ const timeline = [
   {
     year: '2018',
     label: 'Expansion',
-    text: 'Déploiement de centaines de lampadaires solaires dans plusieurs communes du Bénin.',
+    text: 'Installation de milliers de lampadaires solaires dans plusieurs communes du Bénin.',
   },
   {
     year: '2026',
@@ -38,7 +38,7 @@ const timeline = [
 const values = [
   {
     n: '01',
-    title: 'Excellence technique',
+    title: 'Efficacité technique',
     text: 'Installations dimensionnées avec rigueur, conformes aux normes internationales.',
   },
   {
@@ -54,7 +54,7 @@ const values = [
   {
     n: '04',
     title: 'Transparence',
-    text: 'Devis clairs, délais respectés, garanties précises : la confiance avant tout.',
+    text: 'Devis clairs, délais respectés, garanties précises.',
   },
 ];
 
@@ -132,7 +132,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-px overflow-hidden rounded-[28px] border border-char/15 bg-char/15 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <article key={v.n} className="group bg-bone p-7 transition-colors duration-500 ease-editorial hover:bg-char hover:text-bone">
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-char/40 group-hover:text-bone/60">
+                <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black group-hover:text-bone/60">
                   № {v.n}
                 </p>
                 <h3 className="mt-12 font-display text-2xl font-medium tracking-tightest">

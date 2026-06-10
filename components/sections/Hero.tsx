@@ -27,7 +27,7 @@ const SLIDES: Slide[] = [
       <>
         L&apos;énergie du <span className="text-ember">soleil</span>,
         <br />
-        au service du Bénin.
+        au service du Bénin
       </>
     ),
     description:
@@ -44,7 +44,7 @@ const SLIDES: Slide[] = [
       <>
         Des <span className="text-ember">kits solaires</span>
         <br />
-        dimensionnés sur-mesure.
+        dimensionnés sur-mesure
       </>
     ),
     description:
@@ -61,7 +61,7 @@ const SLIDES: Slide[] = [
       <>
         L&apos;eau arrive
         <br />
-        là où le <span className="text-ember">soleil brille</span>.
+        là où le <span className="text-ember">soleil brille</span>
       </>
     ),
     description:
@@ -78,7 +78,7 @@ const SLIDES: Slide[] = [
       <>
         Éclairer un village,
         <br />
-        <span className="text-ember">alimenter</span> une commune.
+        <span className="text-ember">alimenter</span> une commune
       </>
     ),
     description:
@@ -165,7 +165,7 @@ export default function Hero() {
         {/* Filtre / overlay */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-char/55"
+          className="absolute inset-0 bg-char/10"
         />
         <div
           aria-hidden
@@ -193,7 +193,7 @@ export default function Hero() {
         {/* Top meta bar (sous le header overlay) */}
         <div className="container-page flex flex-shrink-0 items-center justify-between pt-28 text-[0.7rem] md:pt-32">
           <span className="font-mono uppercase tracking-[0.32em] text-bone/70">
-            ★ Cotonou · Bénin · 6.3702° N
+            ★ Cotonou · Bénin
           </span>
           <span className="hidden font-mono uppercase tracking-[0.32em] text-bone/50 md:inline">
             № {String(index + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}

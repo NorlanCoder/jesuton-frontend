@@ -46,7 +46,7 @@ export default function ContactPage() {
         title={
           <>
             Parlons de votre{' '}
-            <span className="italic text-ember">projet solaire</span>.
+            <span className="italic text-ember">projet solaire</span>
           </>
         }
         description="Particulier, entreprise ou collectivité : notre équipe étudie votre projet et vous propose la meilleure solution sans engagement."
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="bg-bone-50 p-10 lg:col-span-7 lg:p-12">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-char/60">
+              <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black">
                 ★ Formulaire
               </p>
               <h2 className="mt-4 font-display text-3xl tracking-tightest text-char">

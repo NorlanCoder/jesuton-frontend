@@ -39,7 +39,7 @@ export default function AdminDashboardPage() {
     <div className="min-h-screen bg-bone">
       {/* Barre supérieure */}
       <header className="flex items-center justify-between border-b border-char/10 px-6 py-4">
-        <span className="font-mono text-xs uppercase tracking-widest text-char/50">
+        <span className="font-mono text-xs uppercase tracking-widest text-black">
           Administration · Jesuton SARL
         </span>
         <div className="flex items-center gap-4">

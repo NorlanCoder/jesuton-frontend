@@ -37,14 +37,14 @@ const stats: Stat[] = [
     Icon: Activity,
   },
   {
-    value: 2000,
+    value: 5000,
     suffix: '+',
     label: 'Kits solaires vendus',
     caption: 'Foyers, commerces, bureaux.',
     Icon: Sun,
   },
   {
-    value: 1000,
+    value: 100,
     suffix: '+',
     label: 'Audits énergétiques',
     caption: 'Diagnostics & études techniques.',
@@ -63,7 +63,7 @@ export default function Stats() {
             <h2 className="display-2 mt-6 max-w-[18ch]">
               Une décennie de
               <br />
-              réalisations <span className="text-ember">concrètes</span>.
+              réalisations <span className="text-ember">concrètes</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-char/75 lg:col-span-5 lg:col-start-8">
@@ -92,7 +92,7 @@ export default function Stats() {
               />
 
               {/* Numéro éditorial */}
-              <span className="relative font-mono text-[0.7rem] uppercase tracking-[0.28em] text-char/50">
+              <span className="relative font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
                 № {String(i + 1).padStart(2, '0')}
               </span>
 
