@@ -68,6 +68,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/logo-jesuton.ico',
+    shortcut: '/logo-jesuton.ico',
+  },
 };
 
 export const viewport: Viewport = {

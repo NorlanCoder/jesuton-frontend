@@ -100,11 +100,11 @@ export default function ServicesPage() {
       <PageHeader
         index="03"
         eyebrow="Services"
-        meta="Six métiers · Un engagement"
+        meta="Cinq métiers · Un engagement"
         title={
           <>
             Du conseil à la{' '}
-            <span className="italic text-ember">maintenance</span>, sans rupture.
+            <span className="italic text-ember">maintenance</span>, sans rupture
           </>
         }
         description="Nous prenons en charge l'intégralité de votre projet : étude, dimensionnement, équipement, installation, mise en service, suivi long terme."

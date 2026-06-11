@@ -86,7 +86,7 @@ export default function AboutPage() {
               <SectionMark index="01" label="Histoire" />
               <h2 className="display-2 mt-6 max-w-[16ch]">
                 D&apos;une intuition à une{' '}
-                <span className="italic text-ember">expertise reconnue</span>.
+                <span className="italic text-ember">expertise reconnue</span>
               </h2>
             </div>
             <p className="max-w-md text-base leading-relaxed text-char/75 lg:col-span-4 lg:col-start-9">

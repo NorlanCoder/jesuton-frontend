@@ -52,7 +52,7 @@ export default async function ProductsPage({ searchParams }: PageProps) {
         title={
           <>
             Le matériel{' '}
-            <span className="italic text-ember">qui fait la différence</span>.
+            <span className="italic text-ember">qui fait la différence</span>
           </>
         }
         description="Une sélection rigoureuse de matériel certifié pour des installations fiables et durables — du kit résidentiel à la microcentrale communale."
