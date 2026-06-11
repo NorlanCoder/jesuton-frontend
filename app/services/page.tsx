@@ -24,30 +24,51 @@ const services = [
     italic: '& installation',
     text: 'Étude des besoins, dimensionnement précis, installation par des techniciens certifiés.',
   },
+  // {
+  //   n: '03',
+  //   title: 'Microcentrales',
+  //   italic: 'solaires',
+  //   text: 'Centrales pour villages, sites isolés et entreprises ayant besoin d’énergie en quantité.',
+  // },
   {
     n: '03',
-    title: 'Microcentrales',
-    italic: 'solaires',
-    text: 'Centrales pour villages, sites isolés et entreprises ayant besoin d’énergie en quantité.',
+    title: 'BTP',
+    italic: '& Construction de batiment',
+    text: 'Électricité bâtiment (installation et mise aux normes), Réseaux électriques et extension de réseau, Assainissement et drainage',
   },
+  // {
+  //   n: '04',
+  //   title: 'Lampadaires',
+  //   italic: 'solaires',
+  //   text: 'Éclairage public autonome : sélection, installation et maintenance préventive.',
+  // },
+  // {
+  //   n: '05',
+  //   title: 'Pompes',
+  //   italic: 'solaires',
+  //   text: 'Adduction d’eau, irrigation agricole, élevage : nos pompes fonctionnent en autonomie.',
+  // },
   {
     n: '04',
-    title: 'Lampadaires',
-    italic: 'solaires',
-    text: 'Éclairage public autonome : sélection, installation et maintenance préventive.',
+    title: 'Infrastructures routières & ',
+    italic: 'assainissement',
+    text: 'Pavage de rue, bitumage, caniveaux',
   },
   {
     n: '05',
-    title: 'Pompes',
-    italic: 'solaires',
-    text: 'Adduction d’eau, irrigation agricole, élevage : nos pompes fonctionnent en autonomie.',
-  },
-  {
-    n: '06',
     title: 'Audits',
     italic: '& études',
     text: 'Audit énergétique, faisabilité, optimisation des installations existantes.',
   },
+
+  {
+    n: '',
+    title: '',
+    italic: '',
+    text: '',
+  },
+  
+
 ];
 
 const process = [

@@ -37,26 +37,9 @@ const SLIDES: Slide[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2400&q=80',
-    alt: 'Toit équipé de panneaux solaires en milieu urbain',
-    eyebrow: 'Résidentiel & commerce',
-    title: (
-      <>
-        Des <span className="text-ember">kits solaires</span>
-        <br />
-        dimensionnés sur-mesure
-      </>
-    ),
-    description:
-      'De 1 à 10 kVA, nous calibrons chaque installation aux usages réels et au climat ouest-africain.',
-    metric: { label: 'Kits installés', value: '2 000+' },
-    cta: { label: 'Voir le catalogue', href: '/produits' },
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=2400&q=80',
+      '/pompage et irrigation.png',
     alt: 'Champs cultivés irrigués grâce à des pompes solaires',
-    eyebrow: 'Pompes & agriculture',
+    eyebrow: 'Pompage solaire & irrigation',
     title: (
       <>
         L&apos;eau arrive
@@ -71,19 +54,37 @@ const SLIDES: Slide[] = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=2400&q=80',
-    alt: 'Champ de panneaux solaires au coucher du soleil',
-    eyebrow: 'Microcentrales hybrides',
+      '/electrification 3.png',
+    alt: 'Champs cultivés irrigués grâce à des pompes solaires',
+    eyebrow: 'Électrification & Réseaux',
     title: (
       <>
-        Éclairer un village,
+      L&apos;avenir de l'<span className="text-ember">énergie</span>, 
         <br />
-        <span className="text-ember">alimenter</span> une commune
+        aujourd'hui
       </>
     ),
     description:
-      'Microcentrales solaires hybrides pour villages, écoles et infrastructures isolées. Étude technique sur-mesure.',
-    metric: { label: 'Microcentrales', value: '30+' },
+      'L\'énergie solaire au service du développement. Nos solutions fournissent de l\'électricité aux communautés et aux entreprises, créant de nouvelles opportunités et améliorant la qualité de vie.',
+    metric: { label: 'Projets d\électricité', value: '200+' },
+    cta: { label: 'Découvrir nos services', href: '/sercices' },
+  },
+  {
+    image:
+      '/yellow-safety-helmet-solar-cell-panel (1).jpg',
+    alt: 'Champ de panneaux solaires au coucher du soleil',
+    eyebrow: 'BTP & Assainissement',
+    title: (
+      <>
+       
+        BTP & Solutions solaires
+        
+        <span className="text-ember"> durables</span>
+      </>
+    ),
+    description:
+      'Solutions BTP intégrées pour centrales solaires, réseaux intelligents et infrastructures communautaires durables. Étude, conception et installation sur-mesure sur tout le territoire béninois.',
+    metric: { label: 'Projets BTP', value: '300+' },
     cta: { label: 'Étudier mon projet', href: '/contact' },
   },
 ];

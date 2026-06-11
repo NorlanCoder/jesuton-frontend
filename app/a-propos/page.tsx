@@ -70,7 +70,7 @@ export default function AboutPage() {
             Dix ans
             <br />
             d&apos;<span className="italic text-ember">obsession</span> pour
-            l&apos;énergie qui dure.
+            l&apos;énergie qui dure
           </>
         }
         description="Jesuton SARL est née d'une conviction : l'énergie solaire est la voie la plus juste pour un Bénin résilient, autonome et prospère."
@@ -124,7 +124,7 @@ export default function AboutPage() {
               <h2 className="display-2 mt-6 max-w-[18ch]">
                 Les principes qui{' '}
                 <span className="italic text-ember">guident</span> chaque
-                installation.
+                installation
               </h2>
             </div>
           </div>
