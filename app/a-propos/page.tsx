@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <p className="font-display text-5xl font-medium leading-none tracking-tightest text-char">
                   {t.year}
                 </p>
-                <p className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-ember">
+                <p className="mt-2 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-ember">
                   {t.label}
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-char/70">
@@ -132,7 +132,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-px overflow-hidden rounded-[28px] border border-char/15 bg-char/15 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <article key={v.n} className="group bg-bone p-7 transition-colors duration-500 ease-editorial hover:bg-char hover:text-bone">
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black group-hover:text-bone/60">
+                <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.28em] text-black group-hover:text-bone/60">
                   № {v.n}
                 </p>
                 <h3 className="mt-12 font-display text-2xl font-medium tracking-tightest">

@@ -92,7 +92,7 @@ export default function Stats() {
               />
 
               {/* Numéro éditorial */}
-              <span className="relative font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
+              <span className="relative font-mono text-[0.7rem] font-bold uppercase tracking-[0.28em] text-black">
                 № {String(i + 1).padStart(2, '0')}
               </span>
 

@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/40">
+            <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-bone/40">
               Index
             </p>
             <ul className="mt-5 space-y-3">
@@ -39,7 +39,7 @@ export default function Footer() {
                     href={l.href}
                     className="group inline-flex items-baseline gap-3 font-display text-2xl tracking-tightest text-bone hover:text-ember transition-colors"
                   >
-                    <span className="font-mono text-[0.65rem] tracking-[0.2em] text-bone/40">
+                    <span className="font-mono text-[0.65rem] font-bold tracking-[0.2em] text-bone/40">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="underline-hover italic">{l.label}</span>
@@ -50,16 +50,19 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/40">
+            <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-bone/40">
               Contact
             </p>
             <div className="mt-5 space-y-5">
               <ContactLine label="Adresse" value={SITE.address} />
-              <ContactLine
-                label="Téléphone"
-                value={SITE.phone}
-                href={`tel:${SITE.phone.replace(/\s+/g, '')}`}
-              />
+              {SITE.phones.map((p) => (
+                <ContactLine
+                  key={p}
+                  label="Téléphone"
+                  value={p}
+                  href={`tel:${p.replace(/\s+/g, '')}`}
+                />
+              ))}
               <ContactLine
                 label="Email"
                 value={SITE.email}
@@ -91,7 +94,7 @@ export default function Footer() {
 
         <div className="mt-20 flex flex-col gap-3 border-t border-bone/10 pt-6 text-xs text-bone/50 md:flex-row md:items-center md:justify-between">
           <p>© {year} Jesuton SARL · Tous droits réservés.</p>
-          <p className="font-mono uppercase tracking-[0.2em]">
+          <p className="font-mono font-bold uppercase tracking-[0.2em]">
             Conçu au Bénin · Pour le Bénin
           </p>
         </div>

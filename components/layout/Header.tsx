@@ -53,14 +53,14 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'group relative inline-flex items-center gap-2 text-sm font-medium tracking-tight transition-colors',
+                  'group relative inline-flex items-center gap-2 text-sm font-bold tracking-tight transition-colors',
                   overlay
                     ? active
                       ? 'text-bone'
                       : 'text-bone/70 hover:text-bone'
                     : active
                       ? 'text-char'
-                      : 'text-char/60 hover:text-char',
+                      : 'text-char/85 hover:text-char',
                 )}
               >
                 <span

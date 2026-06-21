@@ -95,7 +95,7 @@ export default function DirectorWord() {
 
             <div className="mt-8 space-y-5 text-base leading-relaxed text-char/75">
               <p>
-                Bienvenue dans l'univers de JESUTON Sarl, où chaque projet est une opportunité de bâtir un
+                Bienvenue dans l&apos;univers de JESUTON Sarl, où chaque projet est une opportunité de bâtir un
                 avenir plus lumineux.
                 À la création de cette entreprise, notre ambition était claire : contribuer à lever les contraintes
                 liées à l’accès à l’énergie en proposant des solutions solaires fiables, performantes et accessibles
@@ -125,11 +125,11 @@ export default function DirectorWord() {
                     <span key={i}>{i === 0 ? part : ` ${part}`}</span>
                   ))}
                 </p>
-                <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
+                <p className="mt-1 font-mono text-[0.7rem] font-bold uppercase tracking-[0.28em] text-black">
                   {DIRECTOR.role}
                 </p>
               </div>
-              <span className="hidden font-mono text-[0.65rem] uppercase tracking-[0.32em] text-black sm:inline">
+              <span className="hidden font-mono text-[0.65rem] font-bold uppercase tracking-[0.32em] text-black sm:inline">
                 Cotonou · 2026
               </span>
             </div>

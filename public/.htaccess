@@ -1,0 +1,19 @@
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# Fichiers existants → servis directement
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Dossiers existants → servis directement
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Extensions statiques → servis directement sans fallback
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg|ico|css|js|woff|woff2|ttf|eot|pdf|mp4|webm)$ - [L]
+
+# Nouveaux produits non générés au build → fallback sur la page produit générique
+RewriteRule ^produits/([^/]+)/?$ /produits/_/index.html [L]
+
+# Tout le reste → index.html (routing Next.js côté client)
+RewriteRule ^ /index.html [L]

@@ -1,48 +1,16 @@
-import type { Metadata } from 'next';
-import { Suspense } from 'react';
+'use client';
+
+import { Suspense, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { PackageOpen } from 'lucide-react';
 import PageHeader from '@/components/ui/PageHeader';
 import ProductCard from '@/components/products/ProductCard';
 import ProductFilters from '@/components/products/ProductFilters';
 import Pagination from '@/components/products/Pagination';
-import { fetchProducts, fetchCategories } from '@/services/server-api';
-import type { ProductStatus } from '@/types';
+import { productsApi, categoriesApi } from '@/services/api';
+import type { Category, Paginated, Product, ProductStatus } from '@/types';
 
-export const metadata: Metadata = {
-  title: 'Catalogue',
-  description:
-    'Découvrez nos kits solaires, lampadaires, pompes, microcentrales et accessoires solaires. Filtrez par catégorie, recherchez et obtenez un devis.',
-};
-
-export const dynamic = 'force-dynamic';
-
-interface PageProps {
-  searchParams: {
-    category?: string;
-    search?: string;
-    status?: string;
-    page?: string;
-  };
-}
-
-export default async function ProductsPage({ searchParams }: PageProps) {
-  const page = Number(searchParams.page) || 1;
-  const status = (searchParams.status as ProductStatus) || '';
-  const filters = {
-    category: searchParams.category,
-    search: searchParams.search,
-    status: status || undefined,
-    page,
-  };
-
-  const [productsResponse, categories] = await Promise.all([
-    fetchProducts(filters),
-    fetchCategories(),
-  ]);
-
-  const products = productsResponse?.data ?? [];
-  const meta = productsResponse?.meta;
-
+export default function ProductsPage() {
   return (
     <>
       <PageHeader
@@ -57,52 +25,99 @@ export default async function ProductsPage({ searchParams }: PageProps) {
         }
         description="Une sélection rigoureuse de matériel certifié pour des installations fiables et durables — du kit résidentiel à la microcentrale communale."
       />
-
       <section className="bg-bone pb-24">
         <div className="container-page">
-          <div className="rounded-[28px] border border-char/10 bg-bone-50 p-6 md:p-10">
-            <Suspense fallback={null}>
-              <ProductFilters categories={categories} />
-            </Suspense>
-          </div>
-
-          <div className="mt-10 flex items-baseline justify-between border-b border-char/10 pb-6">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
-              {meta
-                ? `${String(meta.total).padStart(3, '0')} produit${meta.total > 1 ? 's' : ''}`
-                : 'Chargement…'}
-            </p>
-            {meta && meta.total > 0 && (
-              <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-black">
-                Page {String(meta.current_page).padStart(2, '0')} /{' '}
-                {String(meta.last_page).padStart(2, '0')}
-              </p>
-            )}
-          </div>
-
-          {!productsResponse ? (
-            <ApiError />
-          ) : products.length === 0 ? (
-            <EmptyState />
-          ) : (
-            <>
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {products.map((product, i) => (
-                  <ProductCard key={product.id} product={product} index={i} />
-                ))}
-              </div>
-
-              <Suspense fallback={null}>
-                <Pagination
-                  currentPage={meta?.current_page ?? 1}
-                  lastPage={meta?.last_page ?? 1}
-                />
-              </Suspense>
-            </>
-          )}
+          <Suspense fallback={<div className="h-48" />}>
+            <ProductsContent />
+          </Suspense>
         </div>
       </section>
     </>
+  );
+}
+
+function ProductsContent() {
+  const params = useSearchParams();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [meta, setMeta] = useState<Paginated<Product>['meta'] | null>(null);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  const page = Number(params.get('page')) || 1;
+  const category = params.get('category') ?? undefined;
+  const search = params.get('search') ?? undefined;
+  const status = (params.get('status') as ProductStatus) || undefined;
+
+  useEffect(() => {
+    categoriesApi.list().then(setCategories).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    setLoading(true);
+    setError(false);
+    productsApi
+      .list({ category, search, status, page })
+      .then((res) => {
+        setProducts(res.data);
+        setMeta(res.meta);
+      })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
+  }, [page, category, search, status]);
+
+  return (
+    <>
+      <div className="rounded-[28px] border border-char/10 bg-bone-50 p-6 md:p-10">
+        <ProductFilters categories={categories} />
+      </div>
+
+      <div className="mt-10 flex items-baseline justify-between border-b border-char/10 pb-6">
+        <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.28em] text-black">
+          {loading
+            ? 'Chargement…'
+            : meta
+              ? `${String(meta.total).padStart(3, '0')} produit${meta.total > 1 ? 's' : ''}`
+              : ''}
+        </p>
+        {meta && meta.total > 0 && (
+          <p className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-black">
+            Page {String(meta.current_page).padStart(2, '0')} /{' '}
+            {String(meta.last_page).padStart(2, '0')}
+          </p>
+        )}
+      </div>
+
+      {error ? (
+        <ApiError />
+      ) : loading ? (
+        <LoadingState />
+      ) : products.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {products.map((product, i) => (
+              <ProductCard key={product.id} product={product} index={i} />
+            ))}
+          </div>
+          <Pagination
+            currentPage={meta?.current_page ?? 1}
+            lastPage={meta?.last_page ?? 1}
+          />
+        </>
+      )}
+    </>
+  );
+}
+
+function LoadingState() {
+  return (
+    <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {Array.from({ length: 6 }).map((_, i) => (
+        <div key={i} className="h-72 animate-pulse rounded-[20px] bg-char/5" />
+      ))}
+    </div>
   );
 }
 

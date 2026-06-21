@@ -17,12 +17,12 @@ const items = [
     value: SITE.address,
     Icon: MapPin,
   },
-  {
+  ...SITE.phones.map((p) => ({
     label: 'Téléphone',
-    value: SITE.phone,
-    href: `tel:${SITE.phone.replace(/\s+/g, '')}`,
+    value: p,
+    href: `tel:${p.replace(/\s+/g, '')}`,
     Icon: Phone,
-  },
+  })),
   {
     label: 'Email',
     value: SITE.email,
@@ -57,7 +57,7 @@ export default function ContactPage() {
           <div className="grid gap-px overflow-hidden rounded-[28px] border border-char/15 bg-char/15 lg:grid-cols-12">
             {/* Sidebar */}
             <aside className="bg-char text-bone p-10 lg:col-span-5 lg:p-12">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/60">
+              <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-bone/60">
                 ★ Coordonnées
               </p>
               <h2 className="mt-6 font-display text-4xl italic leading-[0.98] tracking-tightest text-bone">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                         <it.Icon className="h-3.5 w-3.5" />
                       </span>
                       <div>
-                        <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-bone/50">
+                        <p className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-bone/50">
                           {it.label}
                         </p>
                         <p className="mt-1 text-base text-bone group-hover:text-ember transition-colors">
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="bg-bone-50 p-10 lg:col-span-7 lg:p-12">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black">
+              <p className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-black">
                 ★ Formulaire
               </p>
               <h2 className="mt-4 font-display text-3xl tracking-tightest text-char">

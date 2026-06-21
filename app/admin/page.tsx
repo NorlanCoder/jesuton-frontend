@@ -65,7 +65,7 @@ export default function AdminDashboardPage() {
           Bonjour{user ? `, ${user.name}` : ''} 👋
         </h1>
         <p className="mt-3 text-char/50">
-          Vous êtes connecté au panneau d'administration.
+          Vous êtes connecté au panneau d&apos;administration.
         </p>
       </main>
     </div>

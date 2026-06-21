@@ -89,7 +89,7 @@ const solutions: Solution[] = [
     href: '/produits?category=climatisation',
     feature: 'Jusqu’à -70%',
     image:
-      '/close-up-heat-pump-outside-home.jpg',
+      '/climatisation.jpeg',
     alt: 'Intérieur lumineux climatisé avec apport solaire',
     meta: { label: 'Économie d’énergie', value: '-70%' },
   },
@@ -181,7 +181,7 @@ export default function Solutions() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black">
+                <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-black">
                   Solution № {active.index} · {active.feature}
                 </span>
                 <h3 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-ultra text-char sm:text-[4.25rem]">
@@ -253,7 +253,7 @@ export default function Solutions() {
             />
 
             {/* Numéro top-left */}
-            <span className="absolute left-5 top-5 font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/85">
+            <span className="absolute left-5 top-5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-bone/85">
               № {active.index} / {String(solutions.length).padStart(2, '0')}
             </span>
 
@@ -268,7 +268,7 @@ export default function Solutions() {
                 className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3"
               >
                 <div className="rounded-xl border border-bone/20 bg-char/45 px-4 py-3 backdrop-blur-xl">
-                  <p className="font-mono text-[0.6rem] uppercase tracking-[0.28em] text-bone/65">
+                  <p className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.28em] text-bone/65">
                     {active.meta.label}
                   </p>
                   <p className="font-display text-2xl font-extrabold tracking-ultra text-ember sm:text-3xl">
@@ -283,7 +283,7 @@ export default function Solutions() {
         {/* Barre de navigation horizontale style Hero */}
         <div className="mt-14 border-t border-char/15 pt-6">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <p className="hidden font-mono text-[0.7rem] uppercase tracking-[0.32em] text-black md:block">
+            <p className="hidden font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-black md:block">
               Glissez ou utilisez les flèches pour explorer
             </p>
             <div className="flex items-center gap-2 md:ml-auto">

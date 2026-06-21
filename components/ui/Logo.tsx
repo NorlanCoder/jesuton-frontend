@@ -35,8 +35,9 @@ export default function Logo({
     >
       <span
         className={cn(
-          'relative flex flex-shrink-0 items-center justify-center',
+          'relative flex flex-shrink-0 items-center justify-center rounded-xl transition-colors duration-300',
           s.mark,
+          isLight && 'bg-bone/15 p-1.5 ring-1 ring-bone/20',
         )}
       >
         <Image
@@ -44,7 +45,10 @@ export default function Logo({
           alt=""
           fill
           sizes="56px"
-          className="object-contain transition-transform duration-700 ease-editorial group-hover:scale-[1.04]"
+          className={cn(
+            'object-contain transition-transform duration-700 ease-editorial group-hover:scale-[1.04]',
+            isLight && 'drop-shadow-[0_0_6px_rgba(244,239,230,0.4)]',
+          )}
           priority
         />
       </span>

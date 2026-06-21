@@ -61,14 +61,6 @@ const services = [
     text: 'Audit énergétique, faisabilité, optimisation des installations existantes.',
   },
 
-  {
-    n: '',
-    title: '',
-    italic: '',
-    text: '',
-  },
-  
-
 ];
 
 const process = [
@@ -115,9 +107,9 @@ export default function ServicesPage() {
         <div className="container-page">
           <ol className="grid grid-cols-1 divide-y divide-char/15 border-y border-char/15 sm:grid-cols-2 sm:divide-x lg:grid-cols-3">
             {services.map((s) => (
-              <li key={s.n} className="group relative px-2 py-12 sm:px-8">
+              <li key={s.n} className="group relative px-2 py-12 sm:px-8 lg:last:col-span-2">
                 <div className="flex items-start justify-between">
-                  <span className="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-black">
+                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.28em] text-black">
                     № {s.n}
                   </span>
                   <span

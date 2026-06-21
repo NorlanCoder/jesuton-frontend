@@ -59,9 +59,9 @@ const SLIDES: Slide[] = [
     eyebrow: 'Électrification & Réseaux',
     title: (
       <>
-      L&apos;avenir de l'<span className="text-ember">énergie</span>, 
+      L&apos;avenir de l&apos;<span className="text-ember">énergie</span>,
         <br />
-        aujourd'hui
+        aujourd&apos;hui
       </>
     ),
     description:
@@ -166,14 +166,14 @@ export default function Hero() {
         {/* Filtre / overlay */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-char/10"
+          className="absolute inset-0 bg-char/5"
         />
         <div
           aria-hidden
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(180deg, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.25) 35%, rgba(10,10,10,0.7) 100%)',
+              'linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.1) 35%, rgba(10,10,10,0.45) 100%)',
           }}
         />
         <div
@@ -181,7 +181,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.5) 45%, rgba(10,10,10,0.1) 100%)',
+              'linear-gradient(90deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.25) 45%, rgba(10,10,10,0.05) 100%)',
           }}
         />
 
@@ -193,10 +193,10 @@ export default function Hero() {
       <div className="relative z-10 flex flex-1 flex-col">
         {/* Top meta bar (sous le header overlay) */}
         <div className="container-page flex flex-shrink-0 items-center justify-between pt-28 text-[0.7rem] md:pt-32">
-          <span className="font-mono uppercase tracking-[0.32em] text-bone/70">
+          <span className="font-mono font-bold uppercase tracking-[0.32em] text-bone/70">
             ★ Cotonou · Bénin
           </span>
-          <span className="hidden font-mono uppercase tracking-[0.32em] text-bone/50 md:inline">
+          <span className="hidden font-mono font-bold uppercase tracking-[0.32em] text-bone/50 md:inline">
             № {String(index + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
           </span>
         </div>
@@ -255,7 +255,7 @@ export default function Hero() {
                 className="hidden lg:col-span-4 lg:flex lg:items-end lg:justify-end"
               >
                 <div className="w-full max-w-xs rounded-2xl border border-bone/15 bg-char/40 p-6 backdrop-blur-xl">
-                  <p className="font-mono text-[0.65rem] uppercase tracking-[0.32em] text-bone/60">
+                  <p className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.32em] text-bone/60">
                     {slide.metric.label}
                   </p>
                   <p className="mt-2 font-display text-6xl font-extrabold tracking-ultra text-ember">
@@ -319,7 +319,7 @@ export default function Hero() {
 
             {/* Boutons prev / next / pause */}
             <div className="flex items-center justify-between">
-              <p className="hidden font-mono text-[0.7rem] uppercase tracking-[0.32em] text-bone/60 md:block">
+              <p className="hidden font-mono text-[0.7rem] font-bold uppercase tracking-[0.32em] text-bone/60 md:block">
                 Glissez ou utilisez ← → pour naviguer
               </p>
               <div className="flex items-center gap-2 md:ml-auto">

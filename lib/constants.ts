@@ -3,10 +3,10 @@ export const SITE = {
   tagline: 'Énergie solaire de confiance au Bénin',
   description:
     "Jesuton SARL dimentionne, fournit et installe des solutions solaires fiables au Bénin  et dans l'Afrique de l'Ouest : kits solaires, microcentrales, lampadaires, pompes solaires, audits et études techniques.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || '+229 01 95 67 56 30 / +229 01 96 75 56 61',
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'Jesutonofficiel@gmail.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jesuton-sarl.com',
+  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.jesuton-sarl.com/api',
+  phones: ['+229 0196755661', '+229 0162241544'],
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || 'contact@jesuton-sarl.com',
   address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || 'Abomey-Calavi, Benin',
   social: {
     facebook: 'http://facebook.com/profile.php?id=100063686014677',
@@ -28,6 +28,6 @@ export const STATS = [
   { label: 'Lampadaires installés', value: 2000, suffix: '+' },
   { label: 'Pompes solaires', value: 200, suffix: '+' },
   { label: 'Microcentrales', value: 30, suffix: '+' },
-  { label: 'Kits vendus', value: 2000, suffix: '+' },
-  { label: 'Audits énergétiques', value: 1000, suffix: '+' },
+  { label: 'Kits vendus', value: 5000, suffix: '+' },
+  { label: 'Audits énergétiques', value: 100, suffix: '+' },
 ] as const;

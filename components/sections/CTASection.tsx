@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Phone } from 'lucide-react';
+import { SITE } from '@/lib/constants';
 
 const promises = [
   { label: 'Service Disponible', value: ' 24h/24' },
@@ -46,12 +47,12 @@ export default function CTASection() {
 
       <div className="container-page relative py-14 md:py-28">
         {/* Top eyebrow */}
-        <div className="flex items-center justify-between font-mono text-[0.65rem] uppercase tracking-[0.32em] text-black md:text-[0.7rem]">
+        <div className="flex items-center justify-between font-mono text-[0.65rem] font-bold uppercase tracking-[0.32em] text-black md:text-[0.7rem]">
           <span className="inline-flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-ember" />
             Démarrer un projet
           </span>
-          <span className="hidden md:inline">№ 06 / Contact</span>
+          <span className="hidden md:inline">Contact</span>
         </div>
 
         <div className="mt-8 grid items-end gap-8 md:mt-10 md:gap-10 lg:grid-cols-12 lg:gap-12">
@@ -96,11 +97,11 @@ export default function CTASection() {
               </span>
             </Link>
             <Link
-              href="tel:+22900000000"
+              href={`tel:${SITE.phones[0].replace(/\s+/g, '')}`}
               className="inline-flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.28em] text-black transition-colors hover:text-char md:text-[0.7rem]"
             >
               <Phone className="h-3.5 w-3.5" />
-              ou +229 00 00 00 00
+              ou {SITE.phones[0]}
             </Link>
           </motion.div>
         </div>
@@ -114,7 +115,7 @@ export default function CTASection() {
                 key={p.label}
                 className="flex items-baseline justify-between border-b border-char/10 pb-3 last:border-b-0"
               >
-                <span className="font-mono text-[0.6rem] uppercase tracking-[0.28em] text-black">
+                <span className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.28em] text-black">
                   {p.label}
                 </span>
                 <span className="font-display text-lg font-bold tracking-tight text-char">
@@ -135,7 +136,7 @@ export default function CTASection() {
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className="flex flex-col gap-1 px-7 py-8 first:pl-0 last:pr-0"
               >
-                <span className="font-mono text-[0.65rem] uppercase tracking-[0.28em] text-black">
+                <span className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.28em] text-black">
                   {p.label}
                 </span>
                 <span className="font-display text-3xl font-extrabold tracking-tight text-char">
@@ -147,10 +148,10 @@ export default function CTASection() {
         </div>
 
         {/* Pied éditorial */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-2 font-mono text-[0.6rem] uppercase tracking-[0.32em] text-black sm:flex-row sm:items-center md:text-[0.65rem] md:text-char/55">
+        <div className="mt-8 flex flex-col items-start justify-between gap-2 font-bold text-[0.6rem] font-bold uppercase tracking-[0.32em] text-black sm:flex-row sm:items-center md:text-[0.65rem] md:text-char/55">
           <span>Jesuton SARL · Cotonou · Bénin</span>
-          <span className="font-display text-xs font-normal italic tracking-tight text-char/70 md:text-sm md:text-char/80">
-            ☼ L'energie verte pour tous et pour l'avenir.
+          <span className="font-display text-xs font-bold italic tracking-tight text-char/70 md:text-sm md:text-char/80">
+            ☼ L&apos;energie verte pour tous et pour l&apos;avenir.
           </span>
         </div>
       </div>

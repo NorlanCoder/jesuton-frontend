@@ -25,7 +25,7 @@ export default function PageHeader({
         <div className="flex items-center justify-between pb-10 text-[0.7rem]">
           <SectionMark index={index} label={eyebrow} />
           {meta && (
-            <span className="hidden font-mono uppercase tracking-[0.32em] text-black md:inline">
+            <span className="hidden font-mono font-bold uppercase tracking-[0.32em] text-black md:inline">
               {meta}
             </span>
           )}
